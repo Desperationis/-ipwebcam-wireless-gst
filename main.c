@@ -7,8 +7,9 @@
 static void p_added(GstElement* element, GstPad* pad, gpointer user_data) {
 	/* Link decodebin to autovideosink when dynamic pad is created. */
 	GstElement* sink = user_data;
-	gst_element_link(element, sink);
-	g_printerr("Linked decodebin to autovideosink.\n");
+	if(gst_element_link(element, sink) != TRUE) {
+		g_printerr("Error: Could not link decodebin to autovideosink.\n");
+	}
 }
 
 int main (int argc, char *argv[])
