@@ -1,6 +1,9 @@
 # ipwebcam-wireless-gst
 This is a simple gstreamer program for viewing [IP Webcam](https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en_US&gl=US), an Android App, as a low-latency wireless video source with gstreamer. No audio.
 
+## Simple option (Linux)
+You can simply run `command.bash {ip} {port}` to run this program without compilation. I can't guarantee if is as efficient as compiling it however. 
+
 ## Running (Linux)
 To run, install gstreamer via `sudo apt-get install gstreamer1.0*`, then run `gst-ipwebcam {ip} {port}`, where the IP and Port are the IP and Port IP Webcam is streaming to.
 
